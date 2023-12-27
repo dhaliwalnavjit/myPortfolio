@@ -10,7 +10,7 @@ import {
   PinterestIcon,
   SunIcon,
   TwitterIcon,
-} from "./Icons.";
+} from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
@@ -110,7 +110,7 @@ const Navbar = () => {
             <TwitterIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://github.com/dhaliwalnavjit"
             target="_blank"
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
@@ -119,31 +119,13 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
           <motion.a
-            href="/"
+            href="https://www.linkedin.com/in/navjit-singh-3a4710186"
             target="_blank"
             className="w-6 mx-3"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
             <LinkedInIcon />
-          </motion.a>
-          <motion.a
-            href="/"
-            target="_blank"
-            className="w-6 mx-3 bg-light rounded-full"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <PinterestIcon />
-          </motion.a>
-          <motion.a
-            href="/"
-            target="_blank"
-            className="w-6 mx-3"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <DribbbleIcon />
           </motion.a>
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -200,7 +182,7 @@ const Navbar = () => {
               <TwitterIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://github.com/dhaliwalnavjit"
               target="_blank"
               className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
               whileHover={{ y: -2 }}
@@ -209,31 +191,13 @@ const Navbar = () => {
               <GithubIcon />
             </motion.a>
             <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/navjit-singh-3a4710186"
               target="_blank"
               className="w-6 mx-3 sm:mx-1"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
               <LinkedInIcon />
-            </motion.a>
-            <motion.a
-              href="/"
-              target="_blank"
-              className="w-6 mx-3 bg-light rounded-full sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <PinterestIcon />
-            </motion.a>
-            <motion.a
-              href="/"
-              target="_blank"
-              className="w-6 mx-3 sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <DribbbleIcon />
             </motion.a>
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}

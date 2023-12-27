@@ -1,5 +1,5 @@
 import AnimatedText from "@/components/AnimatedText";
-import { GithubIcon } from "@/components/Icons.";
+import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import TransitionEffect from "@/components/TransitionEffect";
 import Head from "next/head";
@@ -45,9 +45,13 @@ const FeaturedProject = ({
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-4xl font-bold sm:text-sm">{title}</h2>
+          <h2 className="my-2 w-full text-left text-4xl font-bold sm:text-sm">
+            {title}
+          </h2>
         </Link>
-        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">{summary}</p>
+        <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
+          {summary}
+        </p>
         <div className="flex mt-2 items-center">
           {githublink !== "/" && (
             <Link href={githublink} target="_blank" className="w-10">
@@ -100,7 +104,9 @@ const Project = ({ type, title, img, link = "/", githublink = "/" }) => {
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">{title}</h2>
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
+            {title}
+          </h2>
         </Link>
         <div className="flex mt-2 items-center justify-between w-full">
           {link !== "/" && (

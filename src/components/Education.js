@@ -17,7 +17,9 @@ const Details = ({ type, time, place, info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 1, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">{type}&nbsp;</h3>
+        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+          {type}&nbsp;
+        </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {place}
         </span>
@@ -37,7 +39,7 @@ const Education = () => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-64">
+    <div className="mt-64 mb-32">
       <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">
         Education
       </h2>
@@ -53,13 +55,13 @@ const Education = () => {
             place="Indian Institute Of Technology, Roorkee"
             info="Completed the bachelor degree in Electronics and communication Engg. in first division with 7.5 CGPA"
           />
-           <Details
+          <Details
             type="Bachelor of technology"
             time="07/2018 - 05/2022"
             place="Indian Institute Of Technology, Roorkee"
             info="Completed the bachelor degree in Electronics and communication Engg. in first division with 7.5 CGPA"
           />
-           <Details
+          <Details
             type="Bachelor of technology"
             time="07/2018 - 05/2022"
             place="Indian Institute Of Technology, Roorkee"

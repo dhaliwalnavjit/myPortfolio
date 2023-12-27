@@ -1,56 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-const Skill = ({ name, x, y }) => {
-  return (
-    <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-        py-3 px-6 shadow-dark absolute dark:text-dark dark:bg-light
-        lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent
-        xs:text-dark xs:dark:text-light xs:font-bold
-        "
-      whileHover={{ scale: 1.05 }}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
-      viewport={{ once: true }}
-    >
-      {name}
-    </motion.div>
-  );
-};
+import { SKILLS } from "@/constants/Skills";
 
 const Skills = () => {
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">
-        Skills
-      </h2>
-      <div
-        className="w-full h-screen relative flex items-center  justify-center rounded-full bg-circularLight dark:bg-circularDark
-      lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg
-      md:bg-circularLightMd md:dark:bg-circularDarkMd
-      sm:bg-circularLightSm sm:dark:bg-circularDarkSm
+      <h2
+        className="mb-4 xl:mb-32 text-lg font-bold uppercase text-dark/75 dark:text-light/75
+        xl:font-bold xl:text-8xl xl:mt-32 xl:w-full xl:text-center md:text-6xl md:mb-16
+        xl:text-dark dark:xl:text-light
       "
       >
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-        p-8 shadow-dark dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2
-        "
-          whileHover={{ scale: 1.05 }}
-        >
-          Web
-        </motion.div>
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="HTML" x="-20vw" y="-2vw" />
-        <Skill name="JavaScript" x="20vw" y="6vw" />
-        <Skill name="ReactJs" x="0vw" y="14vw" />
-        <Skill name="NextJs" x="-20vw" y="-15vw" />
-        <Skill name="Graphql" x="15vw" y="-12vw" />
-        <Skill name="Node.js" x="32vw" y="-5vw" />
-        <Skill name="Java" x="0vw" y="-20vw" />
-        <Skill name="Spring Boot" x="-25vw" y="18vw" />
-        <Skill name="TypeScript" x="-25vw" y="-22vw" />
-        <Skill name="AWS" x="-20vw" y="-2vw" />
+        Skills
+      </h2>
+      <div className="flex flex-wrap gap-3">
+        {SKILLS.map((skill) => {
+          return (
+            <motion.div
+              key={skill}
+              className="border-solid border-dark border-2 p-3 font-medium rounded-md dark:border-light"
+              initial={{ y: 100 }}
+              animate={{ y: 0 }}
+              transition={{ duration: 0.8, ease: "easeIn" }}
+            >
+              {skill}
+            </motion.div>
+          );
+        })}
       </div>
     </>
   );
