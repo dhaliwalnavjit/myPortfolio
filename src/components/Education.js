@@ -1,13 +1,13 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
+import { educations } from "@/constants/Education";
 
 const Details = ({ type, time, place, info }) => {
   const first = useRef(null);
   return (
     <li
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col
-    items-center justify-between md:w-[80%]
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col justify-between md:w-[80%]
     "
       ref={first}
     >
@@ -49,24 +49,15 @@ const Education = () => {
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          <Details
-            type="Bachelor of technology"
-            time="07/2018 - 05/2022"
-            place="Indian Institute Of Technology, Roorkee"
-            info="Completed the bachelor degree in Electronics and communication Engg. in first division with 7.5 CGPA"
-          />
-          <Details
-            type="Bachelor of technology"
-            time="07/2018 - 05/2022"
-            place="Indian Institute Of Technology, Roorkee"
-            info="Completed the bachelor degree in Electronics and communication Engg. in first division with 7.5 CGPA"
-          />
-          <Details
-            type="Bachelor of technology"
-            time="07/2018 - 05/2022"
-            place="Indian Institute Of Technology, Roorkee"
-            info="Completed the bachelor degree in Electronics and communication Engg. in first division with 7.5 CGPA"
-          />
+          {educations.map((education) => (
+            <Details
+              type={education.type}
+              time={education.time}
+              place={education.place}
+              info={education.info}
+              key={education.type}
+            />
+          ))}
         </ul>
       </div>
     </div>

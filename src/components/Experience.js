@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
+import { experiences } from "@/constants/Experience";
 
 const Details = ({ position, company, companyLink, time, address, work }) => {
   const first = useRef(null);
@@ -30,7 +31,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p
+        <div
           dangerouslySetInnerHTML={{ __html: work }}
           className="font-medium w-full md:text-sm"
         />
@@ -58,26 +59,17 @@ const Experience = () => {
           "
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-          <Details
-            position="Software Engineering Intern"
-            company="Publicis sapient"
-            companyLink="https://www.publicissapient.com/"
-            time="05/2021 - 07/2021"
-            address="Gurgaon, India"
-            work="Worked on a team responsible for developing new features for Google's 
-            search engine, including improving the accuracy and relevance of search results and 
-            developing new tools for data analysis and visualization."
-          />
-          <Details
-            position="Associate Software Developer"
-            company="Publicis sapient"
-            companyLink="https://www.publicissapient.com/"
-            time="05/2022 - Present"
-            address="Gurgaon, India"
-            work="Worked on a team responsible for developing new features for Google's 
-            search engine, including improving the accuracy and relevance of search results and 
-            developing new tools for data analysis and visualization."
-          />
+          {experiences.map((experience) => (
+            <Details
+              position={experience.position}
+              company={experience.company}
+              companyLink={experience.companyLink}
+              time={experience.time}
+              address={experience.time}
+              work={experience.work}
+              key={experience.position}
+            />
+          ))}
         </ul>
       </div>
     </div>

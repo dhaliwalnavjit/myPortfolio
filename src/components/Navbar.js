@@ -3,16 +3,16 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
   SunIcon,
   TwitterIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
+
+const enableProjectsTab = false;
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -97,7 +97,7 @@ const Navbar = () => {
         <nav>
           <CustomLink href="/" title="Home" className="mr-4 " />
           <CustomLink href="/about" title="About" className="mx-4 " />
-          <CustomLink href="/projects" title="Projects" className="mx-4 " />
+          {enableProjectsTab && <CustomLink href="/projects" title="Projects" className="mx-4 " />}
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
@@ -164,12 +164,12 @@ const Navbar = () => {
               className="my-2"
               toggle={handleClick}
             />
-            <CustomMobileLink
+            {enableProjectsTab && <CustomMobileLink
               href="/projects"
               title="Projects"
               className="my-2"
               toggle={handleClick}
-            />
+            />}
           </nav>
           <nav className="flex items-center justify-center flex-wrap mt-2">
             <motion.a

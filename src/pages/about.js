@@ -4,11 +4,9 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-2.jpg";
-import { motion } from "framer-motion";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
-import { SKILLS } from "@/constants/Skills";
 import Skills from "@/components/Skills";
 
 const about = () => {
@@ -30,23 +28,42 @@ const about = () => {
                 About Me
               </h2>
               <p className="font-medium">
-                Hi, I&apos;m CodeBucks, a web developer and UI/UX designer with
-                a passion for creating beautiful, functional, and user-centered
-                digital experiences. With 4 years of experience in the field. I
-                am always looking for new and innovative ways to bring my
-                clients&apos; visions to life.
+                Innovative software development professional with 2 years of
+                experience, dedicated to pushing the boundaries of technology
+                and crafting groundbreaking applications. Committed to
+                delivering clean, error-free, and reliable code that not only
+                meets current requirements but also anticipates and addresses
+                future needs. Adept at staying at the forefront of dynamic
+                software trends, I am proficient in a diverse range of
+                programming languages, frameworks, and cutting-edge programming
+                tools.
               </p>
               <p className="font-medium my-4">
-                I believe that design is about more than just making things look
-                pretty – it&apos;s about solving problems and creating
-                intuitive, enjoyable experiences for users.
+                Innovative software development professional with 2 years of
+                experience, dedicated to pushing the boundaries of technology
+                and crafting groundbreaking applications. Committed to
+                delivering clean, error-free, and reliable code that not only
+                meets current requirements but also anticipates and addresses
+                future needs. Adept at staying at the forefront of dynamic
+                software trends, I am proficient in a diverse range of
+                programming languages, frameworks, and cutting-edge programming
+                tools. My passion for software development goes beyond mere
+                proficiency – it&apos;s a commitment to continuous improvement
+                and staying ahead in an ever-evolving technological landscape.
+                With a keen eye for detail and a focus on excellence, I bring a
+                proactive approach to problem-solving, ensuring that the
+                software solutions I create not only meet but exceed
+                expectations.
               </p>
               <p className="font-medium">
-                Whether I&apos;m working on a website, mobile app, or other
-                digital product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                Whether it&apos;s architecting scalable applications, optimizing
+                performance, or implementing innovative features, I thrive on
+                the challenges of creating software that not only meets
+                functional requirements but also delights users. With a
+                foundation built on a solid understanding of software
+                engineering principles, I am poised to contribute significantly
+                to the success and growth of any dynamic and forward-thinking
+                development team
               </p>
             </div>
             <div
