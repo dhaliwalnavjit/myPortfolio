@@ -6,7 +6,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import project1 from "../../public/images/projects/project1.png";
+import project2 from "../../public/images/projects/project2.png";
 
 const FeaturedProject = ({
   type,
@@ -93,7 +94,7 @@ const Project = ({ type, title, img, link = "/", githublink = "/" }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <Image src={img} alt={title} className="w-full h-auto object-contain" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary dark:text-primaryDark font-medium text-xl lg:text-lg md:text-base">
@@ -145,86 +146,28 @@ const projects = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="#"
+                title="Car Rental Application"
+                summary="Introducing our innovative Car Rental Application, meticulously developed utilizing React, Tailwind CSS, and Next.js 14 technologies. 
+                Powered by the Rapid API, this dynamic platform offers an extensive array of vehicle options with detailed specifications, providing users with unparalleled convenience and flexibility. 
+                Leveraging the robust capabilities of Next Router, seamless navigation across diverse URLs is ensured, while advanced filter and search functionalities elevate user interaction. 
+                Explore the forefront of technology in the realm of car rental services with our feature-rich application, setting new standards for efficiency and user experience."
+                link="https://carshow-vercel-app.vercel.app/"
                 type="Featured Project"
-                githublink="#"
+                githublink="https://github.com/dhaliwalnavjit/carshow"
                 img={project1}
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title="Real time chat application"
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                 It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                 local currency.A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                 It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                 local currency."
                 link="#"
-                type="Featured Project"
-                githublink="#"
-                img={project1}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="#"
-                type="Featured Project"
-                githublink="#"
-                img={project1}
-              />
-            </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="#"
-                type="Featured Project"
-                githublink="#"
-                img={project1}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="#"
-                type="Featured Project"
-                githublink="#"
-                img={project1}
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency.A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                local currency."
-                link="#"
-                type="Featured Project"
-                githublink="#"
-                img={project1}
+                githublink="https://github.com/dhaliwalnavjit/Chatroom"
+                img={project2}
               />
             </div>
           </div>

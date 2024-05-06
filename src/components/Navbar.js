@@ -12,7 +12,7 @@ import {
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
-const enableProjectsTab = false;
+const enableProjectsTab = true;
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
